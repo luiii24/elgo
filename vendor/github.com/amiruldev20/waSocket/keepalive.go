@@ -1,0 +1,83 @@
+// 2023 © Whatsmeow
+// Redeveloped by Amirul Dev
+
+package waSocket
+
+import (
+	"context"
+	"math/rand"
+	"time"
+
+	waBinary "github.com/amiruldev20/waSocket/binary"
+	"github.com/amiruldev20/waSocket/types"
+	"github.com/amiruldev20/waSocket/types/events"
+)
+
+var (
+	// KeepAliveResponseDeadline specifies the duration to wait for a response to websocket keepalive pings.
+	KeepAliveResponseDeadline = 10 * time.Second
+	// KeepAliveIntervalMin specifies the minimum interval for websocket keepalive pings.
+	KeepAliveIntervalMin = 20 * time.Second
+	// KeepAliveIntervalMax specifies the maximum interval for websocket keepalive pings.
+	KeepAliveIntervalMax = 30 * time.Second
+
+	// KeepAliveMaxFailTime specifies the maximum time to wait before forcing a reconnect if keepalives fail repeatedly.
+	KeepAliveMaxFailTime = 3 * time.Minute
+)
+
+func (cli *Client) keepAliveLoop(ctx context.Context) {
+	lastSuccess := time.Now()
+	var errorCount int
+	for {
+		interval := rand.Int63n(KeepAliveIntervalMax.Milliseconds()-KeepAliveIntervalMin.Milliseconds()) + KeepAliveIntervalMin.Milliseconds()
+		select {
+		case <-time.After(time.Duration(interval) * time.Millisecond):
+			isSuccess, shouldContinue := cli.sendKeepAlive(ctx)
+			if !shouldContinue {
+				return
+			} else if !isSuccess {
+				errorCount++
+				go cli.dispatchEvent(&events.KeepAliveTimeout{
+					ErrorCount:  errorCount,
+					LastSuccess: lastSuccess,
+				})
+				if cli.EnableAutoReconnect && time.Since(lastSuccess) > KeepAliveMaxFailTime {
+					cli.Log.Debugf("Forcing reconnect due to keepalive failure")
+					cli.Disconnect()
+					go cli.autoReconnect()
+				}
+			} else {
+				if errorCount > 0 {
+					errorCount = 0
+					go cli.dispatchEvent(&events.KeepAliveRestored{})
+				}
+				lastSuccess = time.Now()
+			}
+		case <-ctx.Done():
+			return
+		}
+	}
+}
+
+func (cli *Client) sendKeepAlive(ctx context.Context) (isSuccess, shouldContinue bool) {
+	respCh, err := cli.sendIQAsync(infoQuery{
+		Namespace: "w:p",
+		Type:      "get",
+		To:        types.ServerJID,
+		Content:   []waBinary.Node{{Tag: "ping"}},
+	})
+	if err != nil {
+		cli.Log.Warnf("Failed to send keepalive: %v", err)
+		return false, true
+	}
+	select {
+	case <-respCh:
+		// All good
+		return true, true
+	case <-time.After(KeepAliveResponseDeadline):
+		cli.Log.Warnf("Keepalive timed out")
+		return false, true
+	case <-ctx.Done():
+		return false, false
+	}
+}

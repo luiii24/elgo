@@ -1,0 +1,177 @@
+# filippo.io/edwards25519 v1.1.0
+## explicit; go 1.20
+filippo.io/edwards25519
+filippo.io/edwards25519/field
+# github.com/amiruldev20/waSocket v1.0.14-beta
+## explicit; go 1.20
+github.com/amiruldev20/waSocket
+github.com/amiruldev20/waSocket/appstate
+github.com/amiruldev20/waSocket/appstate/lthash
+github.com/amiruldev20/waSocket/binary
+github.com/amiruldev20/waSocket/binary/proto
+github.com/amiruldev20/waSocket/binary/token
+github.com/amiruldev20/waSocket/socket
+github.com/amiruldev20/waSocket/store
+github.com/amiruldev20/waSocket/store/sqlstore
+github.com/amiruldev20/waSocket/types
+github.com/amiruldev20/waSocket/types/events
+github.com/amiruldev20/waSocket/util/cbcutil
+github.com/amiruldev20/waSocket/util/gcmutil
+github.com/amiruldev20/waSocket/util/hkdfutil
+github.com/amiruldev20/waSocket/util/keys
+github.com/amiruldev20/waSocket/util/log
+# github.com/antchfx/htmlquery v1.3.2
+## explicit; go 1.14
+github.com/antchfx/htmlquery
+# github.com/antchfx/xpath v1.3.1
+## explicit; go 1.14
+github.com/antchfx/xpath
+# github.com/chzyer/readline v1.5.1
+## explicit; go 1.15
+github.com/chzyer/readline
+# github.com/codedius/imagekit-go v1.1.3
+## explicit; go 1.17
+github.com/codedius/imagekit-go
+# github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da
+## explicit
+github.com/golang/groupcache/lru
+# github.com/google/uuid v1.6.0
+## explicit
+github.com/google/uuid
+# github.com/gorilla/websocket v1.5.3
+## explicit; go 1.12
+github.com/gorilla/websocket
+# github.com/joho/godotenv v1.5.1
+## explicit; go 1.12
+# github.com/manifoldco/promptui v0.9.0
+## explicit; go 1.12
+github.com/manifoldco/promptui
+github.com/manifoldco/promptui/list
+github.com/manifoldco/promptui/screenbuf
+# github.com/mattn/go-colorable v0.1.13
+## explicit; go 1.15
+github.com/mattn/go-colorable
+# github.com/mattn/go-isatty v0.0.20
+## explicit; go 1.15
+github.com/mattn/go-isatty
+# github.com/mattn/go-sqlite3 v1.14.22
+## explicit; go 1.19
+github.com/mattn/go-sqlite3
+# github.com/mdp/qrterminal v1.0.1
+## explicit
+github.com/mdp/qrterminal
+# github.com/nfnt/Resize v0.0.0-20180221191011-83c6a9932646
+## explicit
+github.com/nfnt/Resize
+# github.com/probandula/figlet4go v0.0.0-20190224160619-d6cef5b186ea
+## explicit
+# github.com/rs/zerolog v1.33.0
+## explicit; go 1.15
+github.com/rs/zerolog
+github.com/rs/zerolog/internal/cbor
+github.com/rs/zerolog/internal/json
+# go.mau.fi/libsignal v0.1.0
+## explicit; go 1.18
+go.mau.fi/libsignal/cipher
+go.mau.fi/libsignal/ecc
+go.mau.fi/libsignal/groups
+go.mau.fi/libsignal/groups/ratchet
+go.mau.fi/libsignal/groups/state/record
+go.mau.fi/libsignal/groups/state/store
+go.mau.fi/libsignal/kdf
+go.mau.fi/libsignal/keys/chain
+go.mau.fi/libsignal/keys/identity
+go.mau.fi/libsignal/keys/message
+go.mau.fi/libsignal/keys/prekey
+go.mau.fi/libsignal/keys/root
+go.mau.fi/libsignal/keys/session
+go.mau.fi/libsignal/logger
+go.mau.fi/libsignal/protocol
+go.mau.fi/libsignal/ratchet
+go.mau.fi/libsignal/serialize
+go.mau.fi/libsignal/session
+go.mau.fi/libsignal/signalerror
+go.mau.fi/libsignal/state/record
+go.mau.fi/libsignal/state/store
+go.mau.fi/libsignal/util/bytehelper
+go.mau.fi/libsignal/util/errorhelper
+go.mau.fi/libsignal/util/keyhelper
+go.mau.fi/libsignal/util/medium
+go.mau.fi/libsignal/util/optional
+# go.mau.fi/util v0.5.0
+## explicit; go 1.21
+go.mau.fi/util/jsontime
+go.mau.fi/util/random
+go.mau.fi/util/retryafter
+# golang.org/x/crypto v0.24.0
+## explicit; go 1.18
+golang.org/x/crypto/curve25519
+golang.org/x/crypto/curve25519/internal/field
+golang.org/x/crypto/hkdf
+golang.org/x/crypto/pbkdf2
+# golang.org/x/image v0.18.0
+## explicit; go 1.18
+golang.org/x/image/riff
+golang.org/x/image/vp8
+golang.org/x/image/vp8l
+golang.org/x/image/webp
+# golang.org/x/net v0.26.0
+## explicit; go 1.18
+golang.org/x/net/html
+golang.org/x/net/html/atom
+golang.org/x/net/html/charset
+# golang.org/x/sys v0.21.0
+## explicit; go 1.18
+golang.org/x/sys/unix
+# golang.org/x/text v0.16.0
+## explicit; go 1.18
+golang.org/x/text/encoding
+golang.org/x/text/encoding/charmap
+golang.org/x/text/encoding/htmlindex
+golang.org/x/text/encoding/internal
+golang.org/x/text/encoding/internal/identifier
+golang.org/x/text/encoding/japanese
+golang.org/x/text/encoding/korean
+golang.org/x/text/encoding/simplifiedchinese
+golang.org/x/text/encoding/traditionalchinese
+golang.org/x/text/encoding/unicode
+golang.org/x/text/internal/language
+golang.org/x/text/internal/language/compact
+golang.org/x/text/internal/tag
+golang.org/x/text/internal/utf8internal
+golang.org/x/text/language
+golang.org/x/text/runes
+golang.org/x/text/transform
+# google.golang.org/protobuf v1.34.2
+## explicit; go 1.20
+google.golang.org/protobuf/encoding/prototext
+google.golang.org/protobuf/encoding/protowire
+google.golang.org/protobuf/internal/descfmt
+google.golang.org/protobuf/internal/descopts
+google.golang.org/protobuf/internal/detrand
+google.golang.org/protobuf/internal/editiondefaults
+google.golang.org/protobuf/internal/encoding/defval
+google.golang.org/protobuf/internal/encoding/messageset
+google.golang.org/protobuf/internal/encoding/tag
+google.golang.org/protobuf/internal/encoding/text
+google.golang.org/protobuf/internal/errors
+google.golang.org/protobuf/internal/filedesc
+google.golang.org/protobuf/internal/filetype
+google.golang.org/protobuf/internal/flags
+google.golang.org/protobuf/internal/genid
+google.golang.org/protobuf/internal/impl
+google.golang.org/protobuf/internal/order
+google.golang.org/protobuf/internal/pragma
+google.golang.org/protobuf/internal/set
+google.golang.org/protobuf/internal/strs
+google.golang.org/protobuf/internal/version
+google.golang.org/protobuf/proto
+google.golang.org/protobuf/reflect/protoreflect
+google.golang.org/protobuf/reflect/protoregistry
+google.golang.org/protobuf/runtime/protoiface
+google.golang.org/protobuf/runtime/protoimpl
+# rsc.io/qr v0.2.0
+## explicit
+rsc.io/qr
+rsc.io/qr/coding
+rsc.io/qr/gf256
