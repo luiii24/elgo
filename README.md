@@ -30,6 +30,7 @@
 ```bash
 git clone https://github.com/luiii24/elgo
 cd elgo
+go get all
 go run .
 ```
 
