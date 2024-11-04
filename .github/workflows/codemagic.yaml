@@ -1,1 +1,5 @@
-
+workflows:
+  workflow-name:
+    environment:
+      groups:
+        - group-name
