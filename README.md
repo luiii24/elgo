@@ -47,20 +47,10 @@ go run .
 ```bash
 𝐀𝐮𝐭𝐡𝐨𝐫 : lui
 𝐖𝐚 : 082146092695
-𝐛𝐚𝐬𝐞 : -
+𝐛𝐚𝐬𝐞 : ini base
 
 ⫹❰⫺ Matur Nuwun ⫹❱⫺
 ⭝ 
  Allah Yang Maha Kuasa
 ⭝
- Orang Tua
-⭝
  Amirul
-
-⫹⫺ Teman yang membantuku ⫹⫺
-⭝
-  Nggak punya temen ngebot njir 😭😭 (bot go)
-  
-⫹⫺ Lnk Grup ⫹⫺
-⭝
-  https://chat.whatsapp.com/8KLSiApeV9YLuZixNepwJX
